@@ -21,6 +21,21 @@ namespace FizzBuzz
                     n => n % 3 == 0 ? "Fizz" : "",
                     n => n % 5 == 0 ? "Buzz" : ""),
                 new OloloStringConsoleWriter()).Execute();
+            
+            Console.WriteLine("FP is best!");
+        }
+        private static void FizzBuzzFp()
+        {
+            static Func<int, string> Matcher(Func<int, bool> predicate, string term) =>
+                n => predicate(n) ? term : "";
+
+            Enumerable.Range(0, 100)
+                .Select(FunctionalFizzBuzz.FizzBuzz.Combine(
+                    Matcher(n => n.DividesBy(3), "Fizz"),
+                    Matcher(n => n.DividesBy(5), "Buzz"),
+                    Matcher(n => n.DividesBy(7), "Hiss")
+                ))
+                .Iter(Console.WriteLine);
         }
 
         private static void ProceduralFizzBuzz()
