@@ -1,20 +1,11 @@
 ﻿using System;
-using FizzBuzz.ObjectOrientedFizzBuzz;
+using FizzBuzz.ObjectOrientedFizzBuzz.Abstractions;
 
-namespace FizzBuzz
+namespace FizzBuzz.ObjectOrientedFizzBuzz
 {
-    class Program
+    public class EasyFizzBuzz : IFizzBuzz
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Precedural FizzBuzz 💩");
-            ProceduralFizzBuzz();
-            
-            Console.WriteLine("Easy OO-FizzBuzz");
-            new EasyFizzBuzz().Execute();
-        }
-
-        private static void ProceduralFizzBuzz()
+        public void Execute()
         {
             const string buzz = "Buzz";
             const string fizz = "Fizz";
