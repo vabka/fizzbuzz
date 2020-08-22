@@ -100,6 +100,7 @@ Buzz
 Fizz
 97
 98
-Fizz";
+Fizz
+Buzz";
     }
 }
