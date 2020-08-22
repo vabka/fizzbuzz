@@ -1,1 +1,1 @@
-Museum of fizz-buzze implementations
+Museum of fizz-buzz implementations
