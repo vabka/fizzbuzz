@@ -48,7 +48,7 @@ namespace FizzBuzz
             const string fizz = "Fizz";
             const string fizzBuzz = fizz + buzz;
             static bool NumberDividesBy(int n, int d) => n % d == 0;
-            for (var i = 1; i < 100; i++)
+            for (var i = 1; i <= 100; i++)
             {
                 if (NumberDividesBy(i, 15))
                     Console.WriteLine(fizzBuzz);
