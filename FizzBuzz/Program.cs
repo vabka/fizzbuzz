@@ -23,6 +23,7 @@ namespace FizzBuzz
                 new OloloStringConsoleWriter()).Execute();
             
             Console.WriteLine("FP is best!");
+            FizzBuzzFp();
         }
         private static void FizzBuzzFp()
         {
