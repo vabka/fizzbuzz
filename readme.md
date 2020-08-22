@@ -1,1 +1,1 @@
-Просто ещё несколько реализаций FizzBuzz от меня
+Museum of fizz-buzzes implementations
