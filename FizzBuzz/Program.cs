@@ -24,6 +24,9 @@ namespace FizzBuzz
             
             Console.WriteLine("FP is best!");
             FizzBuzzFp();
+
+            Console.WriteLine("Hand-written fizzbuzz");
+            Console.WriteLine(HandJobFizzBuzz.Text);
         }
         private static void FizzBuzzFp()
         {
