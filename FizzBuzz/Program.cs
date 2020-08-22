@@ -15,7 +15,7 @@ namespace FizzBuzz
             Console.WriteLine("Easy OO-FizzBuzz");
             new EasyFizzBuzz().Execute();
 
-            Console.WriteLine("OO-FizzBuz EE");
+            Console.WriteLine("Mixed style OO-FizzBuz EE");
             new FizzBuzz<int, string>(Enumerable.Range(1, 200),
                 new StringMatcher<int>(n => n.ToString(),
                     n => n % 3 == 0 ? "Fizz" : "",
