@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Linq;
 using FizzBuzz.ObjectOrientedFizzBuzz;
+using FizzBuzz.ObjectOrientedFizzBuzz.EnterpriseEdition;
 
 namespace FizzBuzz
 {
@@ -9,9 +11,16 @@ namespace FizzBuzz
         {
             Console.WriteLine("Precedural FizzBuzz 💩");
             ProceduralFizzBuzz();
-            
+
             Console.WriteLine("Easy OO-FizzBuzz");
             new EasyFizzBuzz().Execute();
+
+            Console.WriteLine("OO-FizzBuz EE");
+            new FizzBuzz<int, string>(Enumerable.Range(1, 200),
+                new StringMatcher<int>(n => n.ToString(),
+                    n => n % 3 == 0 ? "Fizz" : "",
+                    n => n % 5 == 0 ? "Buzz" : ""),
+                new OloloStringConsoleWriter()).Execute();
         }
 
         private static void ProceduralFizzBuzz()
